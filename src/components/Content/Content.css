@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --fontOpenSans: 'Open Sans', sans-serif;
+    --fontIBMPlexSans: 'IBM Plex Sans', sans-serif;
+}
+
+p {
+    font-family: var(--fontOpenSans);
+}
+
+.content-header {
+    font-weight: bold;
+}
+
+.filter-font {
+    font-size: 14px;
+}
+
+.header-in-stock {
+    color: green;
+}
+
+.content-name {
+    font-weight: bold;
+}

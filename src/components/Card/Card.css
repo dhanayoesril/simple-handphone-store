@@ -1,0 +1,54 @@
+:root {
+    --primaryColor: #74B71B
+}
+
+.btn-like {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card:hover{ 
+    box-shadow: 1px 8px 20px grey;
+   -webkit-transition:  box-shadow .6s ease-in;
+ }
+
+.card-bg-best {
+    background-image: url("../../images/best-seller.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.card-bg-new {
+    background-image: url("../../images/new.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.card-bg-hot {
+    background-image: url("../../images/hot-item.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.header-text-green {
+    color: var(--primaryColor);
+    font-weight: bold;
+}
+
+.header-text-red {
+    color: red;
+    font-weight: bold;
+}
+
+.sold-out-bg {
+    background-color: red;
+}
+
+.product-points {
+    color: var(--primaryColor);
+}
+
+.reviews-text {
+    font-size: 14px;
+}
+
