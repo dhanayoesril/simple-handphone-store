@@ -22,7 +22,15 @@ const DetailsProduct = () => {
       <p className="route-text">List Product > {data.attributes.name}</p>
       <div className="row">
         <div className="col-md-6">
-          <div className="card header">
+          <div className={
+                  data.attributes.isNew == 1 && Math.round(data.attributes.rating) >= 4 && data.attributes.numOfReviews > 25 ? "card header-hot" 
+                  :  
+                  data.attributes.isNew == 1 && Math.round(data.attributes.rating) >= 4 ? "card header-best"
+                  :
+                  data.attributes.isNew == 1 ? "card header-new"
+                  :
+                  "card p-3"
+                }>
             <div className="d-flex justify-content-center pt-5 pb-5" >
               <img 
                   className="img-product"

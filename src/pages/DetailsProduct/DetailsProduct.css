@@ -13,14 +13,26 @@ body {
 .wrapper {
     padding: 2%
 }
-
+ 
 .product-name {
     font-size: 26px;
     font-weight: bold;
 }
 
-.header {
+.header-new {
     background-image: url("../../images/new.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.header-hot {
+    background-image: url("../../images/hot-item.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.header-best {
+    background-image: url("../../images/best-seller.png");
     background-repeat: no-repeat;
     background-position: top right;
 }
