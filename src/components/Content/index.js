@@ -39,8 +39,8 @@ const Component = () => {
         runIsLoading()
         setStockChecked(!stockChecked)
         let filter = data.filter(a=> a.attributes.stock !== 0)
-        console.log('filter: ', filter)
         setDisplayedData(filter)
+        setAvailableStock(filter)
         setRatingChecked(false)
         setFilter('No Filter')
       }
@@ -53,8 +53,6 @@ const Component = () => {
         runIsLoading()
         setRatingChecked(!ratingChecked)
         setDisplayedData(data)
-        console.log('data: ', data)
-        console.log('filteredDataRating: ', filteredRating)
         setFilter('No Filter')
       }
       else {
@@ -77,7 +75,6 @@ const Component = () => {
         setLoading(false)
         //FullData
         let data = res.data
-        console.log('get: ', data.data)
         setData(data.data)
         
         //FilteredData
@@ -93,7 +90,6 @@ const Component = () => {
     })
     .catch(err=> {
         setLoading(false)
-        console.log(err)
         alert(err.message.data)
     })
   }
@@ -124,12 +120,10 @@ const Component = () => {
       runIsLoading()
       setStockChecked(false)
       setRatingChecked(false)
-      console.log('newProduct: ', newProduct)
     }
     else if(action == 'ulasan') {
       runIsLoading()
       let filter = data.sort((a,b) =>  b.attributes.numOfReviews - a.attributes.numOfReviews)
-      console.log('filter: ', filter)
       setFilter('Ulasan')
       setFilteredUlasan(filter)
       setDisplayedData(filter)
@@ -187,7 +181,7 @@ const Component = () => {
                 <p className="filter-font">Rating 4 Ke Atas</p>
               </div>
               <div className="col-sm-2">
-                <input type="checkbox" checked={ratingChecked} onClick={onPressRatingChecked}/>  
+                <input type="checkbox" checked={ratingChecked} onClick={onPressRatingChecked} readOnly/>  
               </div>
             </div>
             <div className="row">
@@ -195,7 +189,7 @@ const Component = () => {
                 <p className="filter-font">Stock Tersedia</p>
               </div>
               <div className="col-sm-2">
-                <input type="checkbox" checked={stockChecked} onClick={onPressStockChecked}/>  
+                <input type="checkbox" checked={stockChecked} onClick={onPressStockChecked} readOnly/>  
               </div>
             </div>
           </div>

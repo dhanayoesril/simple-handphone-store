@@ -8,7 +8,6 @@ const DetailsProduct = () => {
 
   const {state} = useLocation();
   const { data } = state;
-  console.log('a: ', data)
 
   if(!data || data.length < 1 || data == null) {
     return (
@@ -105,4 +104,4 @@ const DetailsProduct = () => {
   )
 }
 
-export default DetailsProduct
+export default DetailsProduct;
